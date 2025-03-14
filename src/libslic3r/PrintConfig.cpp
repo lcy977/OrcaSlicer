@@ -2561,6 +2561,18 @@ void PrintConfigDef::init_fff_params()
     def->max = max_temp;
     def->set_default_value(new ConfigOptionInts { 200 });
 
+    def             = this->add("nozzle_temperature_initial_layer1", coInts);
+    def->label      = L("Initial layer");
+    def->full_label = L("Initial layer nozzle temperature1");
+    def->tooltip    = L("Nozzle1 temperature to print initial layer when using this filament");
+    def->sidetext   = L("°C");
+    def->min        = 0;
+    def->max        = max_temp;
+    def->set_default_value(new ConfigOptionInts{200});
+
+
+
+
     def = this->add("full_fan_speed_layer", coInts);
     def->label = L("Full fan speed at layer");
     def->tooltip = L("Fan speed will be ramped up linearly from zero at layer \"close_fan_the_first_x_layers\" "
@@ -4896,6 +4908,15 @@ void PrintConfigDef::init_fff_params()
     def->min = 0;
     def->max = max_temp;
     def->set_default_value(new ConfigOptionInts { 200 });
+
+    def             = this->add("nozzle_temperature2", coInts);
+    def->label      = L("Other layers");
+    def->tooltip    = L("Nozzle temperature for layers after the initial one");
+    def->sidetext   = L("°C");
+    def->full_label = L("Nozzle temperature2");
+    def->min        = 0;
+    def->max        = max_temp;
+    def->set_default_value(new ConfigOptionInts{200});
 
     def = this->add("nozzle_temperature_range_low", coInts);
     def->label = L("Min");

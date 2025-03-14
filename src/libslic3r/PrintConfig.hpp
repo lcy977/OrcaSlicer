@@ -1233,7 +1233,8 @@ PRINT_CONFIG_CLASS_DERIVED_DEFINE(
 
     //BBS
     ((ConfigOptionFloat,              initial_layer_infill_speed))
-    ((ConfigOptionInts,               nozzle_temperature_initial_layer))
+    ((ConfigOptionInts,               nozzle_temperature_initial_layer)) 
+    ((ConfigOptionInts,               nozzle_temperature_initial_layer1))
     ((ConfigOptionInts,               full_fan_speed_layer))
     ((ConfigOptionFloats,               fan_max_speed))
     ((ConfigOptionFloats,             max_layer_height))
@@ -1265,7 +1266,8 @@ PRINT_CONFIG_CLASS_DERIVED_DEFINE(
     ((ConfigOptionInt,                standby_temperature_delta))
     ((ConfigOptionFloat,                preheat_time))
     ((ConfigOptionInt,                preheat_steps))
-    ((ConfigOptionInts,               nozzle_temperature))
+    ((ConfigOptionInts,               nozzle_temperature)) 
+    ((ConfigOptionInts,               nozzle_temperature2))
     ((ConfigOptionBools,              wipe))
     // BBS
     ((ConfigOptionInts,               nozzle_temperature_range_low))

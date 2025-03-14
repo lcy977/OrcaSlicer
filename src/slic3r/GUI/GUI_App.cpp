@@ -971,7 +971,7 @@ void GUI_App::post_init()
             bool        sys_preset  = app_config->get("sync_system_preset") == "true";
             this->preset_updater->sync(http_url, language, network_ver, sys_preset ? preset_bundle : nullptr);
 
-            this->check_new_version_sf();
+            //this->check_new_version_sf();
             if (is_user_login() && !app_config->get_stealth_mode()) {
               // this->check_privacy_version(0);
               request_user_handle(0);
@@ -2320,7 +2320,7 @@ bool GUI_App::on_init_inner()
     if(app_config->get("version") != SLIC3R_VERSION) {
         app_config->set("version", SLIC3R_VERSION);
     }
-
+    #if 0
     SplashScreen * scrn = nullptr;
     if (app_config->get("show_splash_screen") == "true") {
         // make a bitmap with dark grey banner on the left side
@@ -2341,7 +2341,7 @@ bool GUI_App::on_init_inner()
         wxYield();
         scrn->SetText(_L("Loading configuration")+ dots);
     }
-
+    #endif
     BOOST_LOG_TRIVIAL(info) << "loading systen presets...";
     preset_bundle = new PresetBundle();
 
@@ -2522,7 +2522,9 @@ bool GUI_App::on_init_inner()
 
     sidebar().obj_list()->init();
     //sidebar().aux_list()->init_auxiliary();
-    mainframe->m_project->init_auxiliary();
+
+
+    //mainframe->m_project->init_auxiliary();   //modify lcy12.27
 
 //     update_mode(); // !!! do that later
     SetTopWindow(mainframe);
@@ -3370,6 +3372,7 @@ void GUI_App::keyboard_shortcuts()
 
 
 void GUI_App::ShowUserGuide() {
+    return; // modify lcy12.27
     // BBS:Show NewUser Guide
     try {
         bool res = false;
@@ -4236,6 +4239,7 @@ Semver get_version(const std::string& str, const std::regex& regexp) {
 
 void GUI_App::check_new_version_sf(bool show_tips, int by_user)
 {
+    return; // modify lcy12.27
     AppConfig* app_config = wxGetApp().app_config;
     bool       check_stable_only = app_config->get_bool("check_stable_update_only");
     auto       version_check_url = app_config->version_check_url(check_stable_only);

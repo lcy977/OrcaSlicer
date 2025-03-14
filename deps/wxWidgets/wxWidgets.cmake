@@ -24,8 +24,8 @@ endif ()
 
 orcaslicer_add_cmake_project(
     wxWidgets
-    GIT_REPOSITORY "https://github.com/SoftFever/Orca-deps-wxWidgets"
-    GIT_SHALLOW ON
+    #GIT_REPOSITORY "https://github.com/SoftFever/Orca-deps-wxWidgets"
+    #GIT_SHALLOW ON
     DEPENDS ${PNG_PKG} ${ZLIB_PKG} ${EXPAT_PKG} ${TIFF_PKG} ${JPEG_PKG}
     CMAKE_ARGS
         -DwxBUILD_PRECOMP=ON

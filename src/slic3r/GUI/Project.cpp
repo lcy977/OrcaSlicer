@@ -220,7 +220,7 @@ void ProjectPanel::on_reload(wxCommandEvent& evt)
 
 void ProjectPanel::msw_rescale() 
 {
-    m_auxiliary->msw_rescale();
+    //m_auxiliary->msw_rescale();//modify lcy12.27
 }
 
 void ProjectPanel::on_size(wxSizeEvent &event)

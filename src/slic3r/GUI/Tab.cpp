@@ -3334,6 +3334,11 @@ void TabFilament::build()
         line.append_option(optgroup->get_option("nozzle_temperature"));
         optgroup->append_line(line);
 
+        line = {L("Nozzle1"), L("Nozzle temperature when printing")};
+        line.append_option(optgroup->get_option("nozzle_temperature_initial_layer1"));
+        line.append_option(optgroup->get_option("nozzle_temperature2"));
+        optgroup->append_line(line);
+
         optgroup = page->new_optgroup(L("Bed temperature"), L"param_bed_temp");
         line = {L("Bambu Cool Plate SuperTack"), L("Bed temperature when cool plate is installed. Value 0 means the filament does not support to print on the Bambu Cool Plate SuperTack")};
         line.append_option(optgroup->get_option("supertack_plate_temp_initial_layer"));
