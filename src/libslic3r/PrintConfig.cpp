@@ -3191,6 +3191,15 @@ void PrintConfigDef::init_fff_params()
     def->max = max_temp;
     def->set_default_value(new ConfigOptionInts { 200 });
 
+    def = this->add("nozzle_temperature_initial_layer1", coInts);
+    def->label = L("First layer");
+    def->full_label = L("First layer nozzle temperature1");
+    def->tooltip = L("Nozzle temperature for printing the first layer when using this filament.");
+    def->sidetext = L(u8"\u2103" /* °C */);	// degrees Celsius, CIS languages need translation
+    def->min = 0;
+    def->max = max_temp;
+    def->set_default_value(new ConfigOptionInts { 200 });
+
     def = this->add("full_fan_speed_layer", coInts);
     def->label = L("Full fan speed at layer");
     def->tooltip = L("Fan speed will be ramped up linearly from zero at layer \"close_fan_the_first_x_layers\" "
@@ -6137,6 +6146,15 @@ void PrintConfigDef::init_fff_params()
     def->tooltip = L("Nozzle temperature for layers after the initial one.");
     def->sidetext = L(u8"\u2103" /* °C */);	// degrees Celsius, CIS languages need translation
     def->full_label = L("Nozzle temperature");
+    def->min = 0;
+    def->max = max_temp;
+    def->set_default_value(new ConfigOptionInts { 200 });
+
+    def = this->add("nozzle_temperature1", coInts);
+    def->label = L("Other layers");
+    def->tooltip = L("Nozzle temperature for layers after the initial one.");
+    def->sidetext = L(u8"\u2103" /* °C */);	// degrees Celsius, CIS languages need translation
+    def->full_label = L("Nozzle temperature1");
     def->min = 0;
     def->max = max_temp;
     def->set_default_value(new ConfigOptionInts { 200 });

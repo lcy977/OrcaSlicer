@@ -1023,7 +1023,7 @@ void GUI_App::post_init()
             bool        sys_preset  = app_config->get("sync_system_preset") == "true";
             this->preset_updater->sync(http_url, language, network_ver, sys_preset ? preset_bundle : nullptr);
 
-            this->check_new_version_sf();
+            //this->check_new_version_sf();
             if (is_user_login() && !app_config->get_stealth_mode()) {
               // this->check_privacy_version(0);
               request_user_handle(0);
@@ -2890,7 +2890,7 @@ bool GUI_App::on_init_inner()
     if(app_config->get("version") != SLIC3R_VERSION) {
         app_config->set("version", SLIC3R_VERSION);
     }
-
+#if 0
     SplashScreen * scrn = nullptr;
     if (app_config->get("show_splash_screen") == "true") {
         // make a bitmap with dark grey banner on the left side
@@ -2911,7 +2911,7 @@ bool GUI_App::on_init_inner()
         wxYield();
         scrn->SetText(_L("Loading configuration")+ dots);
     }
-
+#endif
     BOOST_LOG_TRIVIAL(info) << "loading systen presets...";
     preset_bundle = new PresetBundle();
 
@@ -2940,6 +2940,7 @@ bool GUI_App::on_init_inner()
 #endif // __WXMSW__
 
         preset_updater = new PresetUpdater();
+#if 0
         Bind(EVT_SLIC3R_VERSION_ONLINE, [this](const wxCommandEvent& evt) {
             if (this->plater_ != nullptr) {
                 // this->plater_->get_notification_manager()->push_notification(NotificationType::NewAppAvailable);
@@ -3018,7 +3019,7 @@ bool GUI_App::on_init_inner()
             InfoDialog dlg(nullptr, _L("Info"), msg);
             dlg.ShowModal();
         });
-
+#endif
         Bind(EVT_SHOW_DIALOG, [this](const wxCommandEvent& evt) {
             wxString msg = evt.GetString();
             InfoDialog dlg(this->mainframe, _L("Info"), msg);
@@ -3112,7 +3113,7 @@ bool GUI_App::on_init_inner()
 
     sidebar().obj_list()->init();
     //sidebar().aux_list()->init_auxiliary();
-    mainframe->m_project->init_auxiliary();
+    //mainframe->m_project->init_auxiliary();
 
 //     update_mode(); // !!! do that later
     SetTopWindow(mainframe);
@@ -4185,6 +4186,7 @@ void GUI_App::keyboard_shortcuts()
 
 
 void GUI_App::ShowUserGuide() {
+    return;
     // BBS:Show NewUser Guide
     try {
         bool res = false;
@@ -5332,6 +5334,7 @@ void maybe_attach_updater_signature(Http& http, const std::string& canonical_que
 
 void GUI_App::check_new_version_sf(bool show_tips, int by_user)
 {
+    return;
     AppConfig* app_config = wxGetApp().app_config;
     bool       check_stable_only = app_config->get_bool("check_stable_update_only");
     auto version_check_url = app_config->version_check_url();

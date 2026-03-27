@@ -3890,6 +3890,21 @@ void TabFilament::build()
         line.append_option(optgroup->get_option("nozzle_temperature", 0));
         optgroup->append_line(line);
 
+        line = {L("Nozzle1"), L("Nozzle temperature when printing")};
+        line.append_option(optgroup->get_option("nozzle_temperature_initial_layer1"));
+        line.append_option(optgroup->get_option("nozzle_temperature1"));
+        optgroup->append_line(line);
+        //optgroup->append_single_option_line("nozzle_temperature1", "nozzle_temperature1");
+        /*line = {L("Nozzle1"), L("Nozzle1 temperature when printing")};
+        line.append_option(optgroup->get_option("nozzle_temperature_initial_layer1"));
+        line.append_option(optgroup->get_option("nozzle_temperature1"));
+        optgroup->append_line(line);*/
+        //optgroup = page->new_optgroup(L("Print temperature1"), L"param_extruder_temp1");
+        //line = {L("Nozzle1"), L("Nozzle temperature when printing1")};
+        //line.append_option(optgroup->get_option("nozzle_temperature_initial_layer"));
+        //line.append_option(optgroup->get_option("nozzle_temperature"));
+        //optgroup->append_line(line);
+
         optgroup = page->new_optgroup(L("Bed temperature"), L"param_bed_temp");
         line = { L("Cool Plate (SuperTack)"),
                  L("Bed temperature when the Cool Plate SuperTack is installed. A value of 0 means the filament does not support printing on the Cool Plate SuperTack.") };
