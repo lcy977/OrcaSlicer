@@ -1,0 +1,23 @@
+{
+    "type": "process",
+    "setting_id": "GP004",
+    "name": "0.6mm",
+    "from": "system",
+    "inherits": "fdm_process_common",
+    "instantiation": "true",
+    "layer_height": "0.6",
+    "initial_layer_print_height": "0.6",
+    "bottom_shell_layers": "3",
+    "top_shell_layers": "4",
+    "compatible_printers": [
+        "Simp 1010 0.8 nozzle",
+        "Simp 1010 1.5 nozzle",
+        "Simp 1010 2.0 nozzle",
+        "Simp 1610 1.5 nozzle",
+        "Simp 1610 2.0 nozzle",
+        "Simp 1610 2.5 nozzle",
+        "Simp 1811 2.5 nozzle",
+        "Simp 1811 3.0 nozzle",
+        "Simp 1811 3.5 nozzle"
+    ]
+}

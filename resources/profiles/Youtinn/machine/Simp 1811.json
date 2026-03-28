@@ -1,0 +1,12 @@
+{
+    "type": "machine_model",
+    "name": "Simp 1811",
+    "model_id": "simp1811",
+    "nozzle_diameter": "2.5;3.0;3.5",
+    "machine_tech": "FFF",
+    "family": "Simp3D",
+    "bed_model": "1800.stl",
+    "bed_texture": "001.png",
+    "hotend_model": "hotend.stl",
+    "default_materials": "Simp PLA@4.5mm;Simp PETG@4.5mm;Simp PETG-GF@4.5mm"
+}

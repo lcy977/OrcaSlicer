@@ -1,0 +1,18 @@
+{
+  "type": "filament",
+  "filament_id": "GFL98",
+  "setting_id": "GFSA04",
+  "name": "Youtinn PETG-GF@3.5mm",
+  "from": "system",
+  "instantiation": "true",
+  "inherits": "fdm_filament_pet",
+  "filament_flow_ratio": ["1.2"],
+  "filament_max_volumetric_speed": ["500"],
+  "slow_down_layer_time": ["10"],
+  "filament_diameter": [ "3.5"],
+  "compatible_printers": [
+    "Youtinn 1000 0.8 nozzle",
+    "Youtinn 1000 1.5 nozzle",
+    "Youtinn 1000 2.0 nozzle"
+  ]
+}

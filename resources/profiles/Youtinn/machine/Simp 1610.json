@@ -1,0 +1,11 @@
+{
+    "type": "machine_model",
+    "name": "Simp 1610",
+    "model_id": "simp1610",
+    "nozzle_diameter": "1.5;2.0;2.5",
+    "machine_tech": "FFF",
+    "bed_model": "1600.stl",
+    "bed_texture": "001.png",
+    "hotend_model": "hotend.stl",
+    "default_materials": "Simp PLA@4.5mm;Simp PETG@4.5mm;Simp PETG-GF@4.5mm"
+}

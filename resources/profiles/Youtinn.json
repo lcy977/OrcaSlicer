@@ -1,0 +1,86 @@
+{
+    "name": "Youtinn",
+    "version": "01.04.09.00",
+    "force_update": "0",
+    "description": "Youtinn configurations",
+    "machine_model_list": [
+        {
+            "name": "Youtinn 1000",
+            "sub_path": "machine/Youtinn 1000.json"
+        }
+    ],
+    "process_list": [
+        {
+            "name": "fdm_process_common",
+            "sub_path": "process/fdm_process_common.json"
+        },
+        {
+            "name": "0.3mm",
+            "sub_path": "process/0.3mm.json"
+        },
+        {
+            "name": "0.4mm",
+            "sub_path": "process/0.4mm.json"
+        },
+        {
+            "name": "0.5mm",
+            "sub_path": "process/0.5mm.json"
+        },
+        {
+            "name": "0.6mm",
+            "sub_path": "process/0.6mm.json"
+        },
+        {
+            "name": "0.8mm",
+            "sub_path": "process/0.8mm.json"
+        },
+        {
+            "name": "1.0mm",
+            "sub_path": "process/1.0mm.json"
+        }
+    ],
+    "filament_list": [
+        {
+            "name": "fdm_filament_common",
+            "sub_path": "filament/fdm_filament_common.json"
+        },
+        {
+            "name": "fdm_filament_pla",
+            "sub_path": "filament/fdm_filament_pla.json"
+        },
+        {
+            "name": "fdm_filament_pet",
+            "sub_path": "filament/fdm_filament_pet.json"
+        },
+        {
+            "name": "Youtinn PLA@3.5mm",
+            "sub_path": "filament/Youtinn PLA@3.5mm.json"
+        },
+        {
+            "name": "Youtinn PETG-GF@3.5mm",
+            "sub_path": "filament/Youtinn PETG-GF@3.5mm.json"
+        },
+        {
+            "name": "Youtinn PETG@3.5mm",
+            "sub_path": "filament/Youtinn PETG@3.5mm.json"
+        }
+    ],
+    "machine_list": [
+        {
+            "name": "fdm_machine_common",
+            "sub_path": "machine/fdm_machine_common.json"
+        },
+        {
+            "name": "Youtinn 1000 0.8 nozzle",
+            "sub_path": "machine/Youtinn 1000 0.8 nozzle.json"
+        },
+        {
+            "name": "Youtinn 1000 1.5 nozzle",
+            "sub_path": "machine/Youtinn 1000 1.5 nozzle.json"
+        },
+        {
+            "name": "Youtinn 1000 2.0 nozzle",
+            "sub_path": "machine/Youtinn 1000 2.0 nozzle.json"
+        }
+    ]
+}

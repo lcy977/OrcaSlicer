@@ -1,0 +1,12 @@
+{
+    "type": "machine_model",
+    "name": "Youtinn 1000",
+    "model_id": "Youtinn1000",
+    "nozzle_diameter": "0.8;1.5;2.0",
+    "machine_tech": "FFF",
+    "family": "Youtinn",
+    "bed_model": "1000.stl",
+    "bed_texture": "001.png",
+    "hotend_model": "hotend.stl",
+    "default_materials": "Youtinn PLA@3.5mm;Youtinn PETG@3.5mm;Youtinn PETG-GF@3.5mm"
+}

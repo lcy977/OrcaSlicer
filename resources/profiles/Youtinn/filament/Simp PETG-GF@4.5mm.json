@@ -1,0 +1,21 @@
+{
+  "type": "filament",
+  "filament_id": "GFL98",
+  "setting_id": "GFSA04",
+  "name": "Simp PETG-GF@4.5mm",
+  "from": "system",
+  "instantiation": "true",
+  "inherits": "fdm_filament_pet",
+  "filament_flow_ratio": ["1"],
+  "filament_max_volumetric_speed": ["500"],
+  "slow_down_layer_time": ["20"],
+  "filament_diameter": [ "4.5"],
+  "compatible_printers": [
+    "Simp 1610 1.5 nozzle",
+    "Simp 1610 2.0 nozzle",
+    "Simp 1610 2.5 nozzle",
+    "Simp 1811 2.5 nozzle",
+    "Simp 1811 3.0 nozzle",
+    "Simp 1811 3.5 nozzle"
+  ]
+}

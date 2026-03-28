@@ -1,0 +1,12 @@
+{
+    "type": "machine_model",
+    "name": "Simp 1010",
+    "model_id": "simp1010",
+    "nozzle_diameter": "0.8;1.5;2.0",
+    "machine_tech": "FFF",
+    "family": "Simp3D",
+    "bed_model": "1000.stl",
+    "bed_texture": "001.png",
+    "hotend_model": "hotend.stl",
+    "default_materials": "Simp PLA@3.5mm;Simp PETG@3.5mm;Simp PETG-GF@3.5mm"
+}
