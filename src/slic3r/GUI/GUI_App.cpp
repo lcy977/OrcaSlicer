@@ -2413,6 +2413,11 @@ void GUI_App::init_app_config()
             boost::filesystem::path data_dir_path;
             #ifndef __linux__
                 std::string data_dir = wxStandardPaths::Get().GetUserDataDir().ToUTF8().data();
+#ifdef _WIN32
+                // Keep SLIC3R_APP_KEY unchanged to avoid side effects (e.g. localization catalog lookup),
+                // but force Windows profile storage under %APPDATA%\Youtinn-Slicer.
+                data_dir = (boost::filesystem::path(wxStandardPaths::Get().GetUserConfigDir().ToUTF8().data()) / "Youtinn-Slicer").string();
+#endif
                 //BBS create folder if not exists
                 data_dir_path = boost::filesystem::path(data_dir);
                 set_data_dir(data_dir);
